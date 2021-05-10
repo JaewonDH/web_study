@@ -155,50 +155,72 @@
             </div>            
         </xmp>
         <li>동위 선택자 
-            <ul>
-                <li>div + p  div와 동일한 위치에서 바로 다음 태그가 p인 태그를 선택</li>
+            <ul>                
+                <li>h1 + p  h1와 동일한 위치에서 바로 다음 태그가 p인 태그를 선택</li>
+                <xmp>
+                    h1+div {
+                        color:blue;
+                    } 
+        
+                    <h1 id="title">h1 태그 1 </h3>
+                    <div>div1</div>
+                    <div>div2</div>
+                    <h1>h1 태그 2</h1>
+                    <div>div3</div>
+                    <div>div4</div>
+                    <div>div5</div>      
+                </xmp>
                 <li>div ~ p  div 동일한 위치에서 첫번째 div 밑에 있는 모든 p태그를 선택</li>
+                <xmp>
+                    h1~div {
+                        color:blue;
+                    } 
+        
+                    <h1 id="title">h1 태그 1 </h3>
+                    <div>div1</div>
+                    <div>div2</div>
+                    <h1>h1 태그 2</h1>
+                    <div>div3</div>
+                    <div>div4</div>
+                    <div>div5</div>                                
+                </xmp>
             </ul>
         </li>
         <li>반응 선택자</li> 
         <p>li 태그에 마우스가 over되면 선택된 스타일이 적용 된다.`</p>
         <xmp>
-        #li:hover {
-                    border: 1px solid;  
-                  }
+            div:hover {
+                color:blue;
+            }
+
+            <div>
+                <h1>hover 테스트 입니다.</h1>
+            </div>
         </xmp>
         <li>상태 선택자</li> 
         <p>input:focus,input:enabled,input:disabled 상태에 따라 선택되어 스타일을 적용 한다.</p>
         <p>focus는 입력창의 커서가 활성화 되면 focus가된 것이다.</p>
         <p>disabled 속성을 적용하지 않으면 자동으로 속성이 enabled 이다</p>
         <xmp>
-            <style>
-                input:focus {
-                    border:2px solid #ff0000;
-                    padding:10px;
-                }
-                
-                input:enabled {
-                    color:#00ff00;
-                    font-weight:bold;
-                }
+            input:focus {
+                border:2px solid #ff0000;
+                padding:10px;
+            }
             
-                input:disabled {
-                    color:#ff0000;
-                }
-            </style>
-            
-            </head>
-            
-            <body>
-            <div>
-                <form>
-                    이름 : <input type="text" name="uname"/><br />
-                    아이디 : <input type="text" name="uid"/><br />
-                    비밀번호 : <input type="password" name="upw" value="12345" disabled="disabled"/><br />
-                </form>
-            </div>
-            </body>
+            input:enabled {
+                color:#00ff00;
+                font-weight:bold;
+            }
+        
+            input:disabled {
+                color:#ff0000;
+            }
+
+            <form>
+                이름 : <input type="text" name="uname"/><br />
+                아이디 : <input type="text" name="uid"/><br />
+                비밀번호 : <input type="password" name="upw" value="12345" disabled="disabled"/><br />
+            </form>
         </xmp>        
     </ol>
     <hr>
